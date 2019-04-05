@@ -23,7 +23,14 @@ and in the shell type, `sc.version`
 `spark-shell`
 and in the shell type, `sc.version`
 
-###### 6- open portts on GCP Firewall for *default network*
+###### 6- download movielens sample data set.
+sudo apt install unzip
+`wget http://files.grouplens.org/datasets/movielens/ml-100k.zip`
+unzip ml-100k.zip
+
+for latest data-set, you may use *http://files.grouplens.org/datasets/movielens/ml-latest.zip* url. 
+
+###### 7- open ports on GCP Firewall for *default network* ???
 * 7077
 
 
