@@ -35,6 +35,10 @@ for latest data-set, you may use *http://files.grouplens.org/datasets/movielens/
 - [x] install anaconda on local (w/ conda package manager), then leverage jupiter-notebooks and install pyspark
 - [x] don't install pyspark, you will see some imports errors in your IDE, but that's ok. Run your code on GCP instance where you installes spark.
 
-
+`brew cask install anaconda` install anaconda w/ brew on Mac
+`echo 'export PATH="/usr/local/anaconda3/bin/:$PATH"' >> .zshrc` chanche .profile if not using zsh-terminal!
+`cd ~/anaconda3/bin` 
+`./conda update -n base -c defaults conda`
+`./conda install -c conda-forge pyspark`
 
 
