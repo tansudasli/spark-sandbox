@@ -1,7 +1,9 @@
 # spark-sandbox
 
 ## How to start
-create a GCP (ubuntu 18.04) instance on GCP console, then 
+create a GCP (ubuntu 18.04) instance on GCP console, then connect with that server via appropriate SSH ways.
+* 'gcloud compute --project .... ssh --zone .... ....'
+
 ###### 1- upload *install_apache_spark.sh* or *tansudasli/spark-sandbox* to GCP instance via
 `wget https://raw.githubusercontent.com/tansudasli/spark-sandbox/master/install_apache_spark.sh`
 
@@ -20,4 +22,8 @@ and in the shell type, `sc.version`
 ###### 5- test scala-shell
 `spark-shell`
 and in the shell type, `sc.version`
+
+###### 6- open portts on GCP Firewall for *default network*
+* 7077
+
 
