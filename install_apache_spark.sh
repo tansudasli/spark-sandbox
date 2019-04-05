@@ -19,7 +19,3 @@ echo 'export PATH=$PATH:~/spark-2.4.0-bin-hadoop2.7/bin' >> .profile
 #test pyspark
 pyspark
 #define in the shell, sc.version
-
-#test scala-shell
-spark-shell
-#define in the shell, sc.version
