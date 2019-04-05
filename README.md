@@ -30,12 +30,11 @@ unzip ml-100k.zip
 
 for latest data-set, you may use *http://files.grouplens.org/datasets/movielens/ml-latest.zip* url. 
 
-##### 7- you may want to write pyspark, and other staffs on your local machine without install spark. There are many ways for that, but i prefer anaconda. 
+##### 7- you may want to write pyspark, and other staffs on your local machine without install spark. There are many ways for that, but i prefer anaconda! 
 - [ ] install everything seperately on local (vscode or another IDE, python3, pip3) and jupiyer-notebook and pyspark
 - [x] install anaconda on local (w/ conda package manager), then leverage jupiter-notebooks and install pyspark
 - [x] don't install pyspark, you will see some imports errors in your IDE, but that's ok. Run your code on GCP instance where you installes spark.
 
-###### 7- open ports on GCP Firewall for *default network* ???
-* 7077
+
 
 
