@@ -13,3 +13,11 @@ create a GCP (ubuntu 18.04) instance on GCP console, then
 
 if you face w/ connection or downloading issues, run it again after delete unnecessary folders.
 
+###### 4- test pyspark
+`pyspark`
+and in the shell type, `sc.version`
+
+###### 5- test scala-shell
+`spark-shell`
+and in the shell type, `sc.version`
+
