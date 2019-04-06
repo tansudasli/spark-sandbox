@@ -56,3 +56,7 @@ for anaconda<br>
   `./sbin/start-slave.sh spark://IP:7077`<br> 
   `pyspark --master spark://IP:7077`
 
+##### 9- to run jupiternotebook on GCP instance,
+ `sudo pip3 install runipy`<br>
+ `runipy  spark-sandbox/ratings-histogram.ipynb`
+
