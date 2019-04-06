@@ -5,12 +5,12 @@ create a GCP (ubuntu 18.04) instance on GCP console, then connect with that serv
 * `gcloud compute --project .... ssh --zone .... ....`
 
 on the other hand, spark can be run in many ways. I prefer on GCP.
-- [x] standalone, on GCP 
-      here, you should do some steps on GCP (step-1,2,3,4,5) and on your local machine (step-6)
+- [x] standalone, on GCP<br> 
+      here, you should do some steps on GCP (step-1,2,3,4,5) and on your local machine (step-6)<br> 
       also, open ports: 7070, 4040 on GCP instance firewall
 - [ ] standalone, on your local machine
-- [x] master-slave, on GCP
-    here, you should do some steps on GCP (step-1,2,3,4,5,8) and on your local machine (step-6)
+- [x] master-slave, on GCP<br> 
+    here, you should do some steps on GCP (step-1,2,3,4,5,8) and on your local machine (step-6)<br> 
     also, open ports: 7070, 8080, 8081 on GCP instance firewall
 - [ ] master-slave, on your local machine
 
@@ -52,7 +52,7 @@ for anaconda<br>
  `./conda install -c conda-forge pyspark`<br>
 
 ##### 8- you may want to test *master-slave, on GCP*, then run below commands.
-  `./sbin/start-master.sh`
-  `./sbin/start-slave.sh spark://35.204.177.168:7077`
+  `./sbin/start-master.sh`<br> 
+  `./sbin/start-slave.sh spark://35.204.177.168:7077`<br> 
   `spark-shell --master spark://35.204.177.168:7077`
 
