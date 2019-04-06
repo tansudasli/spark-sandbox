@@ -20,6 +20,7 @@ f = line.map(
 # test the result
 f.collect()
 
-average_by_age = f.mapValues(lambda x: x[0]/x[1])
+average_by_age = f.mapValues(lambda x: x[0]/x[1]).collect()
 
-average_by_age.collect()
+for r in average_by_age:
+    print(r)
