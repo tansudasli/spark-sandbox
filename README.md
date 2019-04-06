@@ -53,6 +53,6 @@ for anaconda<br>
 
 ##### 8- you may want to test *master-slave, on GCP*, then run below commands.
   `./sbin/start-master.sh`<br> 
-  `./sbin/start-slave.sh spark://35.204.177.168:7077`<br> 
-  `spark-shell --master spark://35.204.177.168:7077`
+  `./sbin/start-slave.sh spark://IP:7077`<br> 
+  `spark-shell --master spark://IP:7077`
 
