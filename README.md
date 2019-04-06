@@ -4,6 +4,12 @@
 create a GCP (ubuntu 18.04) instance on GCP console, then connect with that server via appropriate SSH ways.
 * `gcloud compute --project .... ssh --zone .... ....`
 
+on the other hand, spark can be run in many ways. I prefer on GCP.
+- [x] standalone, on GCP (open ports: 7070, 4040) 
+- [ ] standalone, on your local machine
+- [x] master-slave, on GCP (open ports: 7070, 8080, 8081)
+- [ ] master-slave, on your local machine
+
 ###### 1- upload *install_apache_spark.sh* or *tansudasli/spark-sandbox* to GCP instance via
 `wget https://raw.githubusercontent.com/tansudasli/spark-sandbox/master/install_apache_spark.sh`
 
@@ -28,7 +34,7 @@ and in the shell type, `sc.version`
 `wget http://files.grouplens.org/datasets/movielens/ml-100k.zip`<br>
 `unzip ml-100k.zip`
 
-for latest data-set, you may use *http://files.grouplens.org/datasets/movielens/ml-latest.zip* url. 
+for latest & largest data-set, you may use *http://files.grouplens.org/datasets/movielens/ml-latest.zip* url. 
 
 ##### 7- you may want to write pyspark, and other staffs on your local machine without install spark. There are many ways for that, but i prefer anaconda! 
 - [ ] install everything seperately on local (vscode or another IDE, python3, pip3) and jupiyer-notebook and pyspark
@@ -42,4 +48,8 @@ for anaconda<br>
  `./conda update -n base -c defaults conda`<br>
  `./conda install -c conda-forge pyspark`<br>
 
+////
+ ./sbin/start-master.sh
+ ./sbin/start-slave.sh spark://35.204.177.168:7077
+ spark-shell --master spark://35.204.177.168:7077
 
