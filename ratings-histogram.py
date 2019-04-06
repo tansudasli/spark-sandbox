@@ -1,10 +1,11 @@
 from pyspark import SparkConf, SparkContext
 import collections
 
+# you don't need below 2 lines in pyspark interactive shell !
 conf = SparkConf().setMaster("local").setAppName("RatingsHistogram")
 sc = SparkContext(conf = conf)
 
-lines = sc.textFile("~/ml-100k/u.data")
+lines = sc.textFile("./spark-sandbox/ml-100k/u.data")
 ratings = lines.map(lambda x: x.split()[2])
 result = ratings.countByValue()
 
