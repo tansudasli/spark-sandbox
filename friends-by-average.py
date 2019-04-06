@@ -6,7 +6,8 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster("local").setAppName("FriendByAverage")
 sc = SparkContext(conf=conf)
 
-line = sc.textFile("./spark-sandbox/fake-friends/friends.txt")
+#line = sc.textFile("./spark-sandbox/fake-friends/friends.txt")
+line = sc.textFile("./spark-sandbox/fake-friends/friends-2.txt")
 
 # read file test
 line.count()
