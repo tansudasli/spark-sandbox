@@ -9,9 +9,10 @@ sc = SparkContext(conf = conf)
 lines = sc.textFile("./spark-sandbox/words/book.txt")
 
 words = lines.flatMap(
-    lambda lines: re.compile(r'\w+', re.UNICODE).split(lines.lower())).map(
+    lambda lines: re.compile(r'\W+', re.UNICODE).split(lines.lower())).map(
         lambda word: (word,1)).reduceByKey(
-            lambda x,y: x+y).collect()
+            lambda x,y: x+y).map(
+                lambda x: (x[1],x[0])).sortByKey().collect()
             
-for word, count in words.items():
-    print(word + "\t" + str(count))
+for word, count in words:
+    print(str(word) + "\t\t" + str(count))
