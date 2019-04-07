@@ -2,7 +2,7 @@ from pyspark import SparkConf, SparkContext
 import collections
 
 # you don't need below 2 lines in pyspark interactive shell !
-conf = SparkConf().setMaster("local").setAppName("RatingsHistogram")
+conf = SparkConf().setMaster("local").setAppName("MaxWeather")
 sc = SparkContext(conf = conf)
 
 #stationid,date,entryType,celsius,,,,
