@@ -28,4 +28,4 @@ movies = lines.flatMap(
                 
 
 #movie-name popularity
-print("%s is most popular w/ %i times" % (heroDictionary.value[int(movies[1])], movies[0]))
+print("%s is the most popular marvel hero w/ %i times" % (heroDictionary.value[int(movies[1])], movies[0]))
