@@ -6,7 +6,7 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster("local").setAppName("WordCounterEnhanced")
 sc = SparkContext(conf = conf)
 
-lines = sc.textFile("./spark-sandbox/words/books.txt")
+lines = sc.textFile("./spark-sandbox/words/book.txt")
 
 words = lines.flatMap(
     lambda lines: re.compile(r'\w+', re.UNICODE).split(lines.lower())).map(
