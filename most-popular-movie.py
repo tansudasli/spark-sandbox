@@ -15,6 +15,7 @@ def loadMovieNames():
         movieNames[int(fields[0])] = fields[1]
     return movieNames
 
+#broadcast master dataset
 nameDictionary = sc.broadcast(loadMovieNames())
 
 #user-id,movie-id,rating,timespamp
