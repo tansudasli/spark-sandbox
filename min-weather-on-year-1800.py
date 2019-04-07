@@ -9,4 +9,3 @@ sc = SparkContext(conf = conf)
 lines = sc.textFile("./spark-sandbox/weather/year-1800.txt")
 weathers = lines.map(lambda line: line.split(',')).map(
     lambda x: (x[0], x[2], x[3]))
-    
