@@ -1,5 +1,4 @@
 from pyspark import SparkConf, SparkContext
-import collections
 
 # you don't need below 2 lines in pyspark interactive shell !
 conf = SparkConf().setMaster("local").setAppName("MaxWeather")
