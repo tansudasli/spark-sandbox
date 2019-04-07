@@ -6,6 +6,7 @@ conf = SparkConf().setMaster("local").setAppName("WordCounter")
 sc = SparkContext(conf = conf)
 
 lines = sc.textFile("./spark-sandbox/words/starwars.txt")
+
 words = lines.flatMap(
     lambda lines: lines.split()).map(
         lambda word: (word,1)).reduceByKey(
