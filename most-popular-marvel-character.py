@@ -24,10 +24,8 @@ movies = lines.flatMap(
     lambda line: line.split()).map(
         lambda heroID: (heroID, 1)).reduceByKey(
             lambda x,y: (x+y)).map(
-                lambda x: (x[1],x[0])).sortByKey().map(
-                    lambda x: (heroDictionary.value[int(x[1])], x[0])).collect()
+                lambda x: (x[1],x[0])).max()
+                
 
-
-for key, value in movies:
-    #movie-name popularity
-    print("%s %i" % (key, value))
+#movie-name popularity
+print("%s is most popular w/ %i times" % (heroDictionary.value[int(movies[1])], movies[0]))
