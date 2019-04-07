@@ -15,4 +15,4 @@ weathers = lines.map(
                     lambda x,y: min(x,y)).collect()           #result-> [('ITE00100554', -148), ('EZE00100082', -135)]
 
 for weather in weathers:
-    print(weather[0] + "\t" + str(weather[1]))
+    print(weather[0] + "\t" + str(weather[1]) + " Celsius")
