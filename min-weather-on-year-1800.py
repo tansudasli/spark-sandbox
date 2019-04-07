@@ -12,7 +12,7 @@ weathers = lines.map(
         lambda x: (x[0], x[2], int(x[3]))).filter(            #[('ITE00100554', 'TMAX', '-75'), ('ITE00100554', 'TMIN', '-148')]
             lambda x: "TMIN" in x[1]).map(                    #decrease 1825 lines to 730 !
                 lambda x: (x[0], x[2])).reduceByKey(          #[('ITE00100554', -148), ('EZE00100082', -135)]
-                    lambda x,y: min(x,y))                     #result-> [('ITE00100554', -148), ('EZE00100082', -135)]
+                    lambda x,y: min(x,y)).collect()           #result-> [('ITE00100554', -148), ('EZE00100082', -135)]
 
 for weather in weathers:
     print(weather[0] + "\t" + str(weather[1]))
