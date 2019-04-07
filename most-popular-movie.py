@@ -28,5 +28,5 @@ movies = lines.map(
 
 
 for key, value in movies:
-    #movie-id popularity
+    #movie-name popularity
     print("%s %i" % (key, value))
