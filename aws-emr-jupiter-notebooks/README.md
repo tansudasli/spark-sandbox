@@ -1,4 +1,4 @@
-# jupiter notebooks for Amazon EMR spark-sandbox
+# jupiter notebooks for Amazon EMR Spark
 AWS EMR is same as apache spark concepts. Use s3 buckets for data lake.
 
 ## How to start in Amazon EMR 
