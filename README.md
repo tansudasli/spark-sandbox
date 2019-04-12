@@ -4,7 +4,7 @@
 create a GCP (ubuntu 18.04) instance on GCP console, then connect with that server via appropriate SSH ways.
 * `gcloud compute --project .... ssh --zone .... ....`
 
-on the other hand, spark can be run in many ways. I prefer on GCP.
+on the other hand, spark can be run in many ways. I did on GCP and Serverless Databricks.
 - [x] standalone, on GCP<br> 
       here, you should do some steps on GCP (step-1,2,3,4,5) and on your local machine (step-6)<br> 
       also, open ports: 7070, 4040 on GCP instance firewall
@@ -12,7 +12,13 @@ on the other hand, spark can be run in many ways. I prefer on GCP.
 - [x] master-slave, on GCP<br> 
     here, you should do some steps on GCP (step-1,2,3,4,5,8) and on your local machine (step-6)<br> 
     also, open ports: 7070, 8080, 8081 on GCP instance firewall
+- [x] master-slave, on AWS EMR<br> 
+    look for details under */aws-emr-jupiter-notebooks/README.md* file. You have to pay, either use or not use.
 - [ ] master-slave, on your local machine
+- [x] Serverless Databricks on Azure<br> 
+     look for details under */databricks-jupiter-notebooks/README.md* file. You only pay, when you process.
+- [ ] Serverless Databricks on AWS
+
 
 ###### 1- upload *install_apache_spark.sh* or *tansudasli/spark-sandbox* to GCP instance via
  `wget https://raw.githubusercontent.com/tansudasli/spark-sandbox/master/install_apache_spark.sh`

@@ -19,7 +19,7 @@ def loadMarvelHeroNames():
 heroDictionary = sc.broadcast(loadMarvelHeroNames())
 
 #marvel-hero-id marvel-hero-id marvel-hero-id marvel-hero-id ....
-lines = sc.textFile("./spark-sandbox/marvel/marvel-graph.txt")
+lines = sc.textFile("./spark-sandbox/datasets/marvel/marvel-graph.txt")
 movies = lines.flatMap(
     lambda line: line.split()).map(
         lambda heroID: (heroID, 1)).reduceByKey(

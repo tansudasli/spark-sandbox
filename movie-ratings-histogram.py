@@ -6,7 +6,7 @@ conf = SparkConf().setMaster("local").setAppName("MovieRatingsHistogram")
 sc = SparkContext(conf = conf)
 
 #user-id,movie-id,rating,timespamp
-lines = sc.textFile("./spark-sandbox/ml-100k/u.data")
+lines = sc.textFile("./spark-sandbox/datasets/ml-100k/u.data")
 ratings = lines.map(lambda x: x.split()[2])
 result = ratings.countByValue()
 

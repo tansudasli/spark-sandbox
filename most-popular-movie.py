@@ -8,7 +8,7 @@ sc = SparkContext(conf = conf)
 #movie-id|movie-name|movie-date|imdb-url|0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0
 def loadMovieNames():
     movieNames = {}
-    f = open("./spark-sandbox/ml-100k/u.item", "r", encoding="utf-8", errors="ignore")
+    f = open("./spark-sandbox/datasets/ml-100k/u.item", "r", encoding="utf-8", errors="ignore")
     lines = f.readlines()
     for line in lines:
         fields = line.split("|")

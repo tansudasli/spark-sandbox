@@ -5,7 +5,7 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster("local").setAppName("WordCounter")
 sc = SparkContext(conf = conf)
 
-lines = sc.textFile("./spark-sandbox/words/starwars.txt")
+lines = sc.textFile("./spark-sandbox/datasets/words/starwars.txt")
 
 words = lines.flatMap(
     lambda lines: lines.split()).map(
