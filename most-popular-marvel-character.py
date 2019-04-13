@@ -4,6 +4,10 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster("local").setAppName("MostPopularMarvelCharacter")
 sc = SparkContext(conf = conf)
 
+# for a better written code check, aws-emr-jupiter-notebooks/most-popular-marvel-character.ipynb file.
+# using collectAsMap() function, we can transform an RDD to Dictionary. 
+# So it is much more concise !
+
 #broadcast marvel character names to all executers
 #marvel-hero-id hero-name
 def loadMarvelHeroNames():

@@ -6,7 +6,7 @@ sc = SparkContext(conf = conf)
 
 # for a better written code check, aws-emr-jupiter-notebooks/most-popular-movie.ipynb file.
 # using collectAsMap() function, we can transform an RDD to Dictionary. 
-# So it is mucj more concise !
+# So it is much more concise !
 
 
 #broadcast movienames to all executers, for meaningful movie ids
