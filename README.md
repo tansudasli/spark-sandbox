@@ -18,7 +18,7 @@ on the other hand, spark can be run in many ways. I did on GCP and Serverless Da
        * Leverage stop instances for more decrease.
 - [ ] master-slave, on your local machine
 - [x] Serverless Databricks on Azure<br> 
-     look for details under */databricks-jupiter-notebooks/README.md* file. You only pay, when you process.
+     look for details under */databricks-jupiter-notebooks/README.md* file. You only pay,when you process.
 - [ ] Serverless Databricks on AWS
 
 
