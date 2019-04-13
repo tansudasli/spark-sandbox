@@ -13,8 +13,8 @@ on the other hand, spark can be run in many ways. I did on GCP and Serverless Da
     here, you should do some steps on GCP (step-1,2,3,4,5,8) and on your local machine (step-6)<br> 
     also, open ports: 7070, 8080, 8081 on GCP instance firewall
 - [x] master-slave, on AWS EMR<br> 
-    look for details under */aws-emr-jupiter-notebooks/README.md* file. You have to pay, either use or not use, but 2 optimization is available.
-       * EMR instances are %50 discounted compared to EC2 equivalant instances 
+    look for details under */aws-emr-jupiter-notebooks/README.md* file. You have to pay, either use or not use, but 2 optimization is available. <br>
+       * EMR instances are %50 discounted compared to EC2 equivalant instances <br>
        * Leverage stop instances for more decrease.
 - [ ] master-slave, on your local machine
 - [x] Serverless Databricks on Azure<br> 
