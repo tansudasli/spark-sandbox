@@ -4,6 +4,11 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster("local").setAppName("MostPopularMovie")
 sc = SparkContext(conf = conf)
 
+# for a better written code check, aws-emr-jupiter-notebooks/most-popular-movie.ipynb file.
+# using collectAsMap() function, we can transform an RDD to Dictionary. 
+# So it is mucj more concise !
+
+
 #broadcast movienames to all executers, for meaningful movie ids
 #movie-id|movie-name|movie-date|imdb-url|0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0
 def loadMovieNames():
