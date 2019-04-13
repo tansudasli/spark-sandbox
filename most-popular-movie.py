@@ -14,7 +14,7 @@ def loadMovieNames():
         fields = line.split("|")
         movieNames[int(fields[0])] = fields[1]
     return movieNames
-
+ 
 #broadcast master dataset
 nameDictionary = sc.broadcast(loadMovieNames())
 
