@@ -24,12 +24,11 @@ heroDictionary = sc.broadcast(loadMarvelHeroNames())
 
 #marvel-hero-id marvel-hero-id marvel-hero-id marvel-hero-id ....
 lines = sc.textFile("./spark-sandbox/datasets/marvel/marvel-graph.txt")
-movies = lines.flatMap(
-    lambda line: line.split()).map(
-        lambda heroID: (heroID, 1)).reduceByKey(
-            lambda x,y: (x+y)).map(
-                lambda x: (x[1],x[0])).max()
-                
+movies = lines.flatMap(lambda line: line.split()) \
+            .map(lambda heroID: (heroID, 1)) \
+            .reduceByKey(lambda x,y: (x+y)) \
+            .map(lambda x: (x[1],x[0])) \
+            .max()
 
 #movie-name popularity
 print("%s is the most popular marvel hero w/ %i times" % (heroDictionary.value[int(movies[1])], movies[0]))
