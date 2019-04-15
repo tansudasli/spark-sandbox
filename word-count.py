@@ -7,10 +7,10 @@ sc = SparkContext(conf = conf)
 
 lines = sc.textFile("./spark-sandbox/datasets/words/starwars.txt")
 
-words = lines.flatMap(
-    lambda lines: lines.split()).map(
-        lambda word: (word,1)).reduceByKey(
-            lambda x,y: x+y).collect()
+words = lines.flatMap(lambda lines: lines.split()) \
+             .map(lambda word: (word,1)) \
+             .reduceByKey(lambda x,y: x+y) \
+             .collect()
             
 for word in words:
     print(word)

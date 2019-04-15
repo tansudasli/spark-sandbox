@@ -25,12 +25,13 @@ nameDictionary = sc.broadcast(loadMovieNames())
 
 #user-id,movie-id,rating,timespamp
 lines = sc.textFile("./spark-sandbox/ml-100k/u.data")
-movies = lines.map(
-    lambda x: x.split()).map(
-        lambda x: (int(x[1]), 1)).reduceByKey(
-            lambda x,y: (x+y)).map(
-                lambda x: (x[1], x[0])).sortByKey().map(
-                    lambda x: (nameDictionary.value[x[1]], x[0])).collect()
+movies = lines.map(lambda x: x.split()) \
+              .map(lambda x: (int(x[1]), 1)) \
+              .reduceByKey(lambda x,y: (x+y)) \
+              .map(lambda x: (x[1], x[0])) \
+              .sortByKey() \
+              .map(lambda x: (nameDictionary.value[x[1]], x[0])) \
+              .collect()
 
 
 for key, value in movies:
