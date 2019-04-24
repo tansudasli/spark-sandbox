@@ -16,6 +16,9 @@ echo 'export PYSPARK_PYTHON=python3' >> .profile
 source .profile
 echo 'export PATH=$PATH:~/spark-2.4.0-bin-hadoop2.7/bin' >> .profile
 
+source ~/.profile
+
 #test pyspark
 pyspark
+
 #define in the shell, sc.version
