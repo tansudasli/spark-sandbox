@@ -13,13 +13,27 @@ spark can be run in many ways. I did on AWS EMR, Dataproc on GCP, Computing Inst
 - [x] master-slave, on AWS EMR<br> 
     look for details under */aws-emr-jupiter-notebooks/README.md* file. You have to pay, either use or not use, but 2 optimization is available. <br>
        * EMR instances are %50 discounted compared to EC2 equivalant instances <br>
-       * Leverage stop instances for more decrease.
+       * Leverage spot instances for more cost decrease.
+       * Use transient instances for job kind things
+- [x] master-slave, on GCP Dataproc<br> 
+    very similar to AWS, except more robust and more faster and much better experience in GCP. <br>
+       * Do not forget to add Jupiter component installation and open 8123 port on firewall ! <br>
+       * Leverage preemptible instances for more cost decrease.
+       * Use transient instances for job kind things
 - [ ] master-slave, on your local machine
 - [x] Serverless Databricks on Azure<br> 
      look for details under */databricks-jupiter-notebooks/README.md* file. You only pay,when you process.
 - [ ] Serverless Databricks on AWS
 
 ## How to start
+
+Basicly,
+
+* copy your dataset
+* get your spark cluster
+* do your things in jupiter
+* submit your job to cluster 
+
 
 create a GCP (ubuntu 18.04) instance on GCP console, then connect with that server via appropriate SSH ways.
 * `gcloud compute --project .... ssh --zone .... ....`
