@@ -27,15 +27,14 @@ spark can be run in many ways. I did on AWS EMR, Dataproc on GCP, Computing Inst
 
 ## How to start
 
-Basicly,
+**Basicly**,
 
 * copy your dataset
 * get your spark cluster
 * do your things in jupiter
 * submit your job to cluster 
 
-
-create a GCP (ubuntu 18.04) instance on GCP console, then connect with that server via appropriate SSH ways.
+0- create a GCP (ubuntu 18.04) instance on GCP console, then connect with that server via appropriate SSH ways.
 * `gcloud compute --project .... ssh --zone .... ....`
 
 1- upload *install_apache_spark.sh* or *tansudasli/spark-sandbox* to GCP instance via
