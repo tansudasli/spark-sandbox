@@ -12,9 +12,9 @@ spark can be run in many ways. I did on AWS EMR, Dataproc on GCP, Computing Inst
     also, open ports: 7070, 8080, 8081 on GCP instance firewall
 - [x] master-slave, on AWS EMR<br> 
     look for details under */aws-emr-jupiter-notebooks/README.md* file. You have to pay, either use or not use, but 2 optimization is available. <br>
-       * EMR instances are %50 discounted compared to EC2 equivalant instances <br>
-       * Leverage spot instances for more cost decrease.
-       * Use transient instances for job kind things
+        * EMR instances are %50 discounted compared to EC2 equivalant instances
+        * Leverage spot instances for more cost decrease.
+        * Use transient instances for job kind things
 - [x] master-slave, on GCP Dataproc<br> 
     very similar to AWS, except more robust and more faster and much better experience in GCP. <br>
        * Do not forget to add Jupiter component installation and open 8123 port on firewall ! <br>
