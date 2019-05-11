@@ -1,5 +1,9 @@
 # spark-sandbox
 
+for a brief introduction to [streams](https://github.com/tansudasli/spark-sandbox/wiki/Streaming-Fundamentals)<br>
+
+## How to run spark
+
 spark can be run in many ways. I did on AWS EMR, Dataproc on GCP, Computing Instance on GCP and Serverless Databricks.
 
 - [x] standalone, on GCP<br> 
