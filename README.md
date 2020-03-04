@@ -81,7 +81,7 @@ for anaconda <br>
  `cd ~/anaconda3/bin` <br>
  `conda update -n base -c defaults conda` <br>
  `conda create --name apache-spark python=3`<br>
- `source activate apache-spark` <br>
+ `conda activate apache-spark` <br>
  `conda install -c conda-forge pyspark` <br>
 
     * on VSCode, do not forget to switch python interpreter to anaconda python version!
